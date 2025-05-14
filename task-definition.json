@@ -1,0 +1,23 @@
+{
+  "family": "my-node-app",
+  "executionRoleArn": "arn:aws:iam::288761752790:role/AmazonECSTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "containerDefinitions": [
+    {
+      "name": "my-node-app",
+      "image": "288761752790.dkr.ecr.us-east-1.amazonaws.com/my-node-app:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ]
+}
+
+
